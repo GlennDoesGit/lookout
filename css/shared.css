@@ -1,0 +1,6 @@
+.window {
+    border: 2px solid var(--lt_yellow);
+    margin-bottom: 12px;
+    background-color: var(--lt_black);
+    padding: 12px;
+}
