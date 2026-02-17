@@ -29,22 +29,22 @@
 }
 
 .par_layer1 {
-    background-image: url("/images/par_layer1.png");
+    background-image: url("images/par_layer1.png");
     animation: parScroll 25s linear infinite;
 }
 
 .par_layer2 {
-    background-image: url("/images/par_layer2.png");
+    background-image: url("images/par_layer2.png");
     animation: parScroll 40s linear infinite;
 }
 
 .par_layer3 {
-    background-image: url("/images/par_layer3.png");
+    background-image: url("images/par_layer3.png");
     animation: parScroll 70s linear infinite;
 }
 
 .par_layer4 {
-    background-image: url("/images/par_layer4.png");
+    background-image: url("images/par_layer4.png");
     animation: parScroll 120s linear infinite;
 }
 
