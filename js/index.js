@@ -1,3 +1,6 @@
+// Because relative and absolute paths are annoying and weird.
+const BASE_PATH = new URL('../', document.currentScript.src).pathname;
+
 // Wave text animation
 const waveText = document.querySelector('.wave-text');
 
@@ -136,13 +139,13 @@ if (weatherTemp && weatherDesc && weatherWind && weatherIcon) {
                     getWindDescription(wind) + " (" + wind + " km/h)";
 
                 const sprite = getWeatherSprite(code);
-                weatherIcon.src = "../images/weather/" + sprite;
+                weatherIcon.src = BASE_PATH + "images/weather/" + sprite;
             })
             .catch(() => {
                 weatherTemp.textContent = "Unavailable";
                 weatherDesc.textContent = "Unavailable";
                 weatherWind.textContent = "Unavailable";
-                weatherIcon.src = "../images/weather/NoData.png"
+                weatherIcon.src = BASE_PATH + "images/weather/NoData.png"
             });
 
     }
