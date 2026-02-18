@@ -84,7 +84,7 @@ if (weatherTemp && weatherDesc && weatherWind) {
 
     function loadWeather() {
 
-        fetch("https://api.open-meteo.com/v1/forecast?latitude=1.3667&longitude=103.8&current=temperature_2m,weather_code,is_day,wind_speed_10m&timezone=Asia%2FSingapore")
+        fetch("https://api.open-meteo.com/v1/forecast?latitude=1.3551&longitude=103.9901&current=temperature_2m,weather_code,wind_speed_10m&timezone=Asia%2FSingapore")
             .then(res => res.json())
             .then(data => {
 
