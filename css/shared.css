@@ -1,6 +1,40 @@
 .window {
-    border: 2px solid var(--lt_yellow);
+    border: 2px solid var(--lt_dark);
     margin-bottom: 12px;
     background-color: var(--lt_black);
-    padding: 12px;
+    padding: 6px;
+}
+
+.window-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    background-image: linear-gradient(to right, var(--lt_blue), var(--lt_lavender));
+
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.window-content {
+    padding: 8px;
+}
+
+.window-title::after {
+    content: "";
+    display: block;
+
+    width: 12px;
+    height: 12px;
+
+    background-image: url(../images/ui/ui_close.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    image-rendering: pixelated;
+}
+
+.highlight-text {
+    color: var(--lt_yellow);
 }

@@ -73,14 +73,52 @@ function getWindDescription(speed) {
     return "Storm";
 }
 
-
-// Fetch weather
-// Fetch weather
+// Get elements and fetch weather
 const weatherTemp = document.getElementById("weather-temp");
 const weatherDesc = document.getElementById("weather-desc");
 const weatherWind = document.getElementById("weather-wind");
+const weatherIcon = document.getElementById("weather-icon");
 
-if (weatherTemp && weatherDesc && weatherWind) {
+if (weatherTemp && weatherDesc && weatherWind && weatherIcon) {
+
+    function getWeatherSprite(code) {
+
+        const hour = new Date().getHours();
+        const isDay = hour >= 6 && hour < 18;
+
+        // Clear
+        if (code === 0) {
+            return isDay ? "Clear_Day.png" : "Clear_Night.png";
+        }
+
+        // Mostly clear
+        if (code === 1) {
+            return isDay ? "MostlyClear_Day.png" : "MostlyClear_Night.png";
+        }
+
+        // Cloudy
+        if (code === 2) return "Cloudy.png";
+
+        // Overcast
+        if (code === 3) return "Overcast.png";
+
+        // Fog
+        if (code === 45 || code === 48) return "Fog.png";
+
+        // Drizzle
+        if ([51, 53, 55].includes(code)) return "Drizzle.png";
+
+        // Rain
+        if ([61, 63, 80, 81].includes(code)) return "Rain.png";
+
+        // Heavy rain
+        if ([65, 82].includes(code)) return "Heavy_Rain.png";
+
+        // Storm
+        if (code === 95) return "Storm.png";
+
+        return "NoData.png";
+    }
 
     function loadWeather() {
 
@@ -96,11 +134,15 @@ if (weatherTemp && weatherDesc && weatherWind) {
                 weatherDesc.textContent = weatherCodes[code] || "Unknown";
                 weatherWind.textContent =
                     getWindDescription(wind) + " (" + wind + " km/h)";
+
+                const sprite = getWeatherSprite(code);
+                weatherIcon.src = "../images/weather/" + sprite;
             })
             .catch(() => {
                 weatherTemp.textContent = "Unavailable";
                 weatherDesc.textContent = "Unavailable";
                 weatherWind.textContent = "Unavailable";
+                weatherIcon.src = "../images/weather/NoData.png"
             });
 
     }

@@ -24,8 +24,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Jersey+10&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Jersey+10&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -65,14 +64,48 @@
 
         <div class="first-section">
             <div class="main-section">
+                <div class="window" id="weather-window">
+                    <div class="window-title">
+                        Introduction
+                    </div>
 
+                    <div class="window-content">
+                        <h1>Hello, I'm Glenn!</h1>
+                        <p>I am primarily a <em class="highlight-text">programmer</em>, but also a 2D pixel artist, and a video editor.</p>
+                        <p>I currently have a strong interest in <em class="highlight-text">game development</em>. I enjoy designing gameplay systems and learning about all things programming.</p>
+                        <p>This website will serve to showcase past and on-going projects, some of my skills and accomplishments, and general portfolio things.</p>
+                    </div>
+                </div>
             </div>
             <div class="sidebar">
-                <div class="window">
-                    <p>Local time: <span id="local-time"></span></p>
-                    <p>Weather: <span id="weather-temp"></span></p>
-                    <p>Condition: <span id="weather-desc"></span></p>
-                    <p>Wind: <span id="weather-wind"></span></p>
+                <div class="window" id="weather-window">
+                    <div class="window-title">
+                        Local Conditions
+                    </div>
+
+                    <div class="window-content" id="weather-content">
+                        <img src="images/weather/NoData.png" id="weather-icon">
+
+                        <div id="weather-content-text">
+                            <span id="local-time"></span>
+                            <span>
+                                <span class="highlight-text" id="weather-temp">0°C</span> with
+                                <span class="highlight-text" id="weather-desc">Clear Sky</span>
+                            </span>
+                            <span id="weather-wind">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="window" id="weather-window">
+                    <div class="window-title">
+                        Quick Links
+                    </div>
+
+                    <div class="window-content">
+                        ArtStation<br>
+                        Itch.io
+                    </div>
                 </div>
             </div>
         </div>
