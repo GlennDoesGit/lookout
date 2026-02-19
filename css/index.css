@@ -120,7 +120,7 @@ header {
 .header-nav {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 22px;
     width: 100%;
     background-color: var(--lt_mutedblue);
 }

@@ -9,10 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 6px 8px;
+    padding: 4px 8px;
     background-image: linear-gradient(to right, var(--lt_blue), var(--lt_lavender));
 
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
@@ -37,4 +37,8 @@
 
 .highlight-text {
     color: var(--lt_yellow);
+}
+
+a {
+    text-decoration: none;
 }
