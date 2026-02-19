@@ -41,4 +41,9 @@
 
 a {
     text-decoration: none;
+    color: var(--lt_lavender_l)
+}
+
+a:hover {
+    color: var(--lt_peach);
 }
