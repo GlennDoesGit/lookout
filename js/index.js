@@ -144,7 +144,7 @@ function getWeatherInfo(code, isDay) {
 
     return {
         desc: "Unknown",
-        icon: "NoData.png",
+        icon: "no-data.png",
     };
 }
 
@@ -176,14 +176,14 @@ if (weatherTemp && weatherDesc && weatherWind && weatherIcon) {
 
                 weatherWind.textContent = getWindDescription(wind) + " (" + wind + " km/h)";
 
-                weatherIcon.src = "../images/weather/" + weather.icon;
+                weatherIcon.src = "./images/weather/" + weather.icon;
             })
 
             .catch(() => {
                 weatherTemp.textContent = "Unavailable";
                 weatherDesc.textContent = "Unavailable";
                 weatherWind.textContent = "Unavailable";
-                weatherIcon.src = "../images/weather/NoData.png";
+                weatherIcon.src = "./images/weather/no-data.png";
             });
     }
 
