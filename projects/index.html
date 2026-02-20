@@ -7,18 +7,20 @@
 
         <!-- SEO Meta -->
         <title>Glenn | Projects</title>
-        <meta name="description" content="Glenn's Portfolio - Projects, skills, and professional experience." />
+        <meta name="description" content="A portfolio site to showcase projects, skills, and experience." />
 
         <!-- Theme Color -->
         <meta name="theme-color" content="#323348" />
 
-        <link rel="icon" href="images/favicon.ico" sizes="any" />
-        <link rel="icon" href="images/favicon.png" type="image/png" />
+        <meta property="og:image" content="https://glennyeo.com/images/lookout_bg.png" />
 
-        <link rel="stylesheet" href="css/core.css" />
-        <link rel="stylesheet" href="css/shared.css" />
-        <link rel="stylesheet" href="css/utility.css" />
-        <link rel="stylesheet" href="css/projects.css" />
+        <link rel="icon" href="../images/favicon.ico" sizes="any" />
+        <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+        <link rel="stylesheet" href="../css/core.css" />
+        <link rel="stylesheet" href="../css/shared.css" />
+        <link rel="stylesheet" href="../css/utility.css" />
+        <link rel="stylesheet" href="../css/projects.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,23 +41,30 @@
         <main>
             <header>
                 <div class="header-content">
-                    <a href="index.html">
-                        <img src="images/title-new.png" alt="Glenn Portfolio Home" />
+                    <a href="../index.html">
+                        <img src="../images/title-new.png" alt="Glenn Portfolio Home" />
                     </a>
                     <p class="wave-text" id="splash-text">SplashText</p>
                 </div>
                 <nav class="header-nav">
                     <div class="nav-topic dropdown">
-                        <img src="images/icons/projects.png" class="nav-icon" />
-                        <span class="nav-label">Projects</span>
-                        <div class="dropdown-menu">
-                            <a href="#major-projects" class="dropdown-item">Major Projects</a>
-                            <a href="#side-projects" class="dropdown-item">Side Projects</a>
+                        <div class="nav-topic dropdown">
+                            <a href="../projects/" class="nav-link">
+                                <img src="../images/icons/projects.png" class="nav-icon" alt="Projects icon" />
+                                <span class="nav-label">Projects</span>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a href="../projects/#major-projects" class="dropdown-item">Major Projects</a>
+                                <a href="../projects/#side-projects" class="dropdown-item">Side Projects</a>
+                            </div>
                         </div>
                     </div>
                     <div class="nav-topic dropdown">
-                        <img src="images/icons/about.png" class="nav-icon" />
-                        <span class="nav-label">About</span>
+                        <a href="../about/" class="nav-link">
+                            <img src="../images/icons/about.png" class="nav-icon" alt="About icon" />
+                            <span class="nav-label">About</span>
+                        </a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Skills</a>
                             <a href="#" class="dropdown-item">Experience</a>
@@ -63,12 +72,16 @@
                         </div>
                     </div>
                     <div class="nav-topic">
-                        <img src="images/icons/contact.png" class="nav-icon" />
-                        <a href="contact.html" class="nav-label">Contact</a>
+                        <a href="../contact/" class="nav-link">
+                            <img src="../images/icons/contact.png" class="nav-icon" alt="Contact icon" />
+                            <span class="nav-label">Contact</span>
+                        </a>
                     </div>
                     <div class="nav-topic dropdown">
-                        <img src="images/icons/link.png" class="nav-icon" />
-                        <span class="nav-label">Links</span>
+                        <a class="nav-link">
+                            <img src="../images/icons/link.png" class="nav-icon" alt="Links icon" />
+                            <span class="nav-label">Links</span>
+                        </a>
                         <div class="dropdown-menu">
                             <a href="https://www.artstation.com/glennyeo" target="_blank" class="dropdown-item external-link">ArtStation</a>
                             <a href="https://www.linkedin.com/in/glennyeooo/" class="dropdown-item external-link">LinkedIn</a>
@@ -99,13 +112,13 @@
                         <a href="#" class="project-card">
                             <div class="project-header">
                                 <h3>Light Of The Depths</h3>
-                                <img src="images/icons/favourite.png" class="favourite-icon" />
+                                <img src="../images/icons/favourite.png" class="favourite-icon" />
                                 <div class="favourite-tooltip"></div>
                             </div>
                             <div class="tags">Game Dev, Unity, C#</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/lotd/lotd-banner.png"
+                                    src="../images/projects/lotd/lotd-banner.png"
                                     alt="Project Alpha Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -126,13 +139,13 @@
                         <a href="#" class="project-card">
                             <div class="project-header">
                                 <h3>Imbue</h3>
-                                <img src="images/icons/favourite.png" class="favourite-icon" />
+                                <img src="../images/icons/favourite.png" class="favourite-icon" />
                                 <div class="favourite-tooltip"></div>
                             </div>
                             <div class="tags">Game Dev, Unity, C#, VR</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/imbue/imbue-banner.png"
+                                    src="../images/projects/imbue/imbue-banner.png"
                                     alt="Project Alpha Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -158,7 +171,7 @@
                             <div class="tags">Game Dev, Unity, C#</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/spellhunt/spellhunt-banner.png"
+                                    src="../images/projects/spellhunt/spellhunt-banner.png"
                                     alt="Project Beta Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -186,7 +199,7 @@
                             <div class="tags">Game Dev, Unity, C#, Pixel Art</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/sanctity/sanctity-banner.png"
+                                    src="../images/projects/sanctity/sanctity-banner.png"
                                     alt="Project Alpha Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -213,7 +226,7 @@
                             <div class="tags">Game Dev, Unity, C#</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/lux-remade/lux-remade-banner.png"
+                                    src="../images/projects/lux-remade/lux-remade-banner.png"
                                     alt="Project Alpha Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -242,7 +255,7 @@
                             <div class="tags">Game Dev, Unity, C#, Pseudo VR</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/hollowedhalls/hollowedhalls-banner.png"
+                                    src="../images/projects/hollowedhalls/hollowedhalls-banner.png"
                                     alt="Project Alpha Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -268,13 +281,13 @@
                         <a href="#" class="project-card">
                             <div class="project-header">
                                 <h3>The Lookout Tower</h3>
-                                <img src="images/icons/favourite.png" class="favourite-icon" />
+                                <img src="../images/icons/favourite.png" class="favourite-icon" />
                                 <div class="favourite-tooltip"></div>
                             </div>
                             <div class="tags">Web Dev, HTML, CSS, JS</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/lookout-tower/lookout-tower-banner.png"
+                                    src="../images/projects/lookout-tower/lookout-tower-banner.png"
                                     alt="Portfolio Website Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -294,13 +307,13 @@
                         <a href="#" class="project-card">
                             <div class="project-header">
                                 <h3>Gyde's Trait Magazines</h3>
-                                <img src="images/icons/favourite.png" class="favourite-icon" />
+                                <img src="../images/icons/favourite.png" class="favourite-icon" />
                                 <div class="favourite-tooltip"></div>
                             </div>
                             <div class="tags">Modding, Lua, Pixel Art</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/gtm/gydetrait-banner.png"
+                                    src="../images/projects/gtm/gydetrait-banner.png"
                                     alt="Project Gamma Preview"
                                     class="preview-banner flip-front"
                                     onerror="
@@ -324,12 +337,12 @@
                             <div class="tags">Flutter, API</div>
                             <div class="flip-container">
                                 <img
-                                    src="images/projects/gymapp/gymapp-banner.png"
+                                    src="../images/projects/gymapp/gymapp-banner.png"
                                     alt="Portfolio Website Preview"
                                     class="preview-banner flip-front"
                                     onerror="
                                         this.onerror = null;
-                                        this.src = 'images/no-signal.png';
+                                        this.src = '../images/no-signal.png';
                                     "
                                 />
                                 <div class="flip-back">
@@ -349,10 +362,10 @@
         </main>
 
         <button id="backToTopBtn" aria-label="Back to top">
-            <img src="images/ui/ui-back-to-top.png" alt="Back to top" />
+            <img src="../images/ui/ui-back-to-top.png" alt="Back to top" />
         </button>
 
-        <script src="js/projects.js"></script>
-        <script src="js/shared.js"></script>
+        <script src="../js/projects.js"></script>
+        <script src="../js/shared.js"></script>
     </body>
 </html>

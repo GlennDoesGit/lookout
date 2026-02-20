@@ -7,10 +7,12 @@
 
         <!-- SEO Meta -->
         <title>Glenn | Portfolio</title>
-        <meta name="description" content="Glenn's Portfolio - Projects, skills, and professional experience." />
+        <meta name="description" content="A portfolio site to showcase projects, skills, and experience." />
 
         <!-- Theme Color -->
         <meta name="theme-color" content="#323348" />
+
+        <meta property="og:image" content="https://glennyeo.com/images/lookout_bg.png" />
 
         <link rel="icon" href="images/favicon.ico" sizes="any" />
         <link rel="icon" href="images/favicon.png" type="image/png" />
@@ -47,16 +49,23 @@
                 </div>
                 <nav class="header-nav">
                     <div class="nav-topic dropdown">
-                        <img src="images/icons/projects.png" class="nav-icon" />
-                        <a href="projects.html" class="nav-label">Projects</a>
-                        <div class="dropdown-menu">
-                            <a href="projects.html" class="dropdown-item">Major Projects</a>
-                            <a href="projects.html#side-projects" class="dropdown-item">Side Projects</a>
+                        <div class="nav-topic dropdown">
+                            <a href="projects/" class="nav-link">
+                                <img src="images/icons/projects.png" class="nav-icon" alt="Projects icon" />
+                                <span class="nav-label">Projects</span>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a href="projects/#major-projects" class="dropdown-item">Major Projects</a>
+                                <a href="projects/#side-projects" class="dropdown-item">Side Projects</a>
+                            </div>
                         </div>
                     </div>
                     <div class="nav-topic dropdown">
-                        <img src="images/icons/about.png" class="nav-icon" />
-                        <span class="nav-label">About</span>
+                        <a href="about/" class="nav-link">
+                            <img src="images/icons/about.png" class="nav-icon" alt="About icon" />
+                            <span class="nav-label">About</span>
+                        </a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Skills</a>
                             <a href="#" class="dropdown-item">Experience</a>
@@ -64,12 +73,16 @@
                         </div>
                     </div>
                     <div class="nav-topic">
-                        <img src="images/icons/contact.png" class="nav-icon" />
-                        <a href="contact.html" class="nav-label">Contact</a>
+                        <a href="contact/" class="nav-link">
+                            <img src="images/icons/contact.png" class="nav-icon" alt="Contact icon" />
+                            <span class="nav-label">Contact</span>
+                        </a>
                     </div>
                     <div class="nav-topic dropdown">
-                        <img src="images/icons/link.png" class="nav-icon" />
-                        <span class="nav-label">Links</span>
+                        <a class="nav-link">
+                            <img src="images/icons/link.png" class="nav-icon" alt="Links icon" />
+                            <span class="nav-label">Links</span>
+                        </a>
                         <div class="dropdown-menu">
                             <a href="https://www.artstation.com/glennyeo" target="_blank" class="dropdown-item external-link">ArtStation</a>
                             <a href="https://www.linkedin.com/in/glennyeooo/" class="dropdown-item external-link">LinkedIn</a>

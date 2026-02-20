@@ -222,36 +222,31 @@ header {
 }
 
 .nav-topic {
+    position: relative;
+}
+
+.nav-link {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 4px 15px;
-    cursor: pointer;
-    position: relative;
-    transition: transform 0.2s ease;
-    image-rendering: pixelated;
+    text-decoration: none;
 }
 
 .nav-icon {
     width: 32px;
     height: 32px;
-    fill: var(--lt_pink);
-    transition: fill 0.2s ease;
     image-rendering: pixelated;
 }
 
-.nav-topic:hover .nav-icon {
-    fill: var(--lt_peach);
-}
-
 .nav-label {
-    color: var(--white);
+    color: var(--lt_white);
     font-size: 18px;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-.nav-topic:hover .nav-label {
+.nav-link:hover .nav-label {
     color: var(--lt_peach);
 }
 
