@@ -207,8 +207,28 @@ header {
     }
 }
 
-.header-content img {
+.title-image {
     width: 342px;
+    transition: transform 0.3s ease;
+}
+
+.title-image:hover {
+    transform: scale(1.025);
+}
+
+.header-content a {
+    position: relative;
+    display: inline-block;
+}
+
+.header-back-note {
+    position: absolute;
+    width: 25%;
+    max-width: 90px;
+    height: auto;
+    top: 10px;
+    right: -96px;
+    image-rendering: pixelated;
 }
 
 /* Navigation Topics */
@@ -219,6 +239,16 @@ header {
     width: 100%;
     background-color: var(--lt_mutedblue);
     border: 2px solid var(--lt_blue_l);
+    position: relative;
+}
+
+.nav-cat {
+    position: absolute;
+    right: -8px;
+    top: -56px;
+    height: 96px;
+    pointer-events: none;
+    image-rendering: pixelated;
 }
 
 .nav-topic {
@@ -315,9 +345,18 @@ header {
         padding-right: 15px;
     }
 
-    .header-content img {
-        width: 100%;
-        max-width: 300px;
+    .title-image {
+        width: 250px;
+    }
+
+    .header-back-note {
+        position: absolute;
+        width: 33%;
+        max-width: 120px;
+        height: auto;
+        top: 5px;
+        right: -60px;
+        image-rendering: pixelated;
     }
 
     .header-nav {
@@ -332,14 +371,6 @@ header {
 
     .nav-label {
         font-size: 16px;
-    }
-
-    .window-title {
-        font-size: 14px;
-    }
-
-    .window-content {
-        padding: 6px;
     }
 }
 
@@ -404,4 +435,187 @@ header {
 /* Hover feedback */
 #backToTopBtn:hover {
     transform: translateY(-4px);
+}
+
+/* Hamburger button */
+#menuToggleBtn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+
+    width: 48px;
+    height: 48px;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    z-index: 10000;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: transform 0.2s ease;
+}
+
+#menuToggleBtn img {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#menuToggleBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile slide menu */
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 320px;
+    height: 100vh;
+
+    background-color: var(--lt_darkest);
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    z-index: 9999;
+
+    border-right: 2px solid var(--lt_blue_l);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Mobile Hamburger Menu */
+#mobileMenu.open {
+    transform: translateX(0);
+}
+
+#mobileMenu a:hover {
+    color: var(--lt_peach);
+}
+
+.mobile-topic {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-topic-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    font-size: 18px;
+    color: var(--lt_white);
+}
+
+.mobile-topic-single {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    font-size: 18px;
+    color: var(--lt_white);
+    text-decoration: none;
+}
+
+.mobile-icon {
+    width: 28px;
+    height: 28px;
+    image-rendering: pixelated;
+}
+
+.mobile-subtopics {
+    background-color: var(--lt_darkest);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-subtopics a {
+    padding: 12px;
+    padding-left: 42px;
+
+    font-size: 16px;
+
+    color: var(--lt_lavender_l);
+    text-decoration: none;
+
+    transition: background 0.15s ease;
+}
+
+.mobile-subtopics a:hover {
+    background-color: var(--lt_dark);
+    color: var(--lt_peach);
+}
+
+.mobile-topic-main:hover,
+.mobile-topic-single:hover {
+    background-color: var(--lt_dark);
+    color: var(--lt_peach);
+
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menuToggleBtn {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .header-nav {
+        display: none;
+    }
+}
+
+.featured-more-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 0px;
+}
+
+.featured-more-button {
+    display: inline-block;
+
+    margin-top: 0px;
+    padding: 12px 24px;
+
+    background-color: var(--lt_darkest);
+    color: var(--lt_white);
+
+    border: 2px solid var(--lt_lavender_l);
+
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow: 0px 3px 8px var(--lt_shadow);
+
+    transition:
+        transform 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.featured-more-button:hover {
+    background-color: var(--lt_dark);
+    transform: translateY(-2px);
 }

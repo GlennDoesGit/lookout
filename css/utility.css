@@ -1,3 +1,36 @@
+:root {
+    /* Primary Palette */
+    --lt_black: #0e0f16;
+    --lt_darkest: #1c1d29;
+    --lt_dark: #323348;
+    --lt_mutedblue: #3f4873;
+    --lt_blue: #4c5797;
+    --lt_blue_l: #616fae;
+    --lt_violet: #757ab2;
+    --lt_lavender: #9288bd;
+    --lt_lavender_l: #a097c4;
+
+    /* Accent Palette */
+    --lt_pink: #d9b7d8;
+    --lt_peach: #fdc5c6;
+    --lt_yellow: #fee7d5;
+
+    /* Neutral */
+    --lt_white: #fdfdff;
+    --color-text: #323348;
+    --color-text-light: #616fae;
+
+    /* Functional */
+    --color-border: #a097c4;
+    --color-hover: #4c5797;
+    --lt-shadow: #0e0f16a8;
+
+    /* Supporting colors */
+    --completed: #3b694f;
+    --ongoing: #475996;
+    --abandoned: #8a4743;
+}
+
 .centered {
     text-align: center;
 }

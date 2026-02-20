@@ -55,3 +55,23 @@ backToTopBtn.addEventListener("click", () => {
         behavior: "smooth",
     });
 });
+
+const menuBtn = document.getElementById("menuToggleBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+    if (mobileMenu.classList.contains("open") && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.remove("open");
+    }
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+        mobileMenu.classList.remove("open");
+        document.body.classList.remove("menu-open");
+    }
+});

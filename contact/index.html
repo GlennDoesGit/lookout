@@ -12,12 +12,17 @@
         <!-- Theme Color -->
         <meta name="theme-color" content="#323348" />
 
+        <!-- OpenGraph Info -->
+        <meta property="og:title" content="Glenn's' Portfolio" />
+        <meta property="og:description" content="Game developer, programmer, and artist portfolio showcase." />
+        <meta property="og:image" content="https://glennyeo.com/images/lookout_bg.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://glennyeo.com/" />
+
         <meta property="og:image" content="https://glennyeo.com/images/lookout_bg.png" />
 
-        <link rel="icon" href="../images/favicon.ico" sizes="any" />
         <link rel="icon" href="../images/favicon.png" type="image/png" />
 
-        <link rel="stylesheet" href="../css/core.css" />
         <link rel="stylesheet" href="../css/shared.css" />
         <link rel="stylesheet" href="../css/utility.css" />
         <link rel="stylesheet" href="../css/contact.css" />
@@ -42,22 +47,21 @@
             <header>
                 <div class="header-content">
                     <a href="../index.html">
-                        <img src="../images/title-new.png" alt="Glenn Portfolio Home" />
+                        <img src="../images/title-new.png" alt="Glenn Portfolio Home" class="title-image" />
+                        <img src="../images/go-back-note.png" alt="go-back-note" class="header-back-note" />
                     </a>
                     <p class="wave-text" id="splash-text">SplashText</p>
                 </div>
                 <nav class="header-nav">
                     <div class="nav-topic dropdown">
-                        <div class="nav-topic dropdown">
-                            <a href="../projects/" class="nav-link">
-                                <img src="../images/icons/projects.png" class="nav-icon" alt="Projects icon" />
-                                <span class="nav-label">Projects</span>
-                            </a>
+                        <a href="../projects/" class="nav-link">
+                            <img src="../images/icons/projects.png" class="nav-icon" alt="Projects icon" />
+                            <span class="nav-label">Projects</span>
+                        </a>
 
-                            <div class="dropdown-menu">
-                                <a href="../projects/#major-projects" class="dropdown-item">Major Projects</a>
-                                <a href="../projects/#side-projects" class="dropdown-item">Side Projects</a>
-                            </div>
+                        <div class="dropdown-menu">
+                            <a href="../projects/#major-projects" class="dropdown-item">Major Projects</a>
+                            <a href="../projects/#side-projects" class="dropdown-item">Side Projects</a>
                         </div>
                     </div>
                     <div class="nav-topic dropdown">
@@ -88,6 +92,8 @@
                             <a href="https://github.com/GlennDoesGit" target="_blank" class="dropdown-item external-link">Github</a>
                         </div>
                     </div>
+
+                    <img src="../images/mello.gif" alt="Cat sprite" class="nav-cat" />
                 </nav>
             </header>
 

@@ -12,12 +12,15 @@
         <!-- Theme Color -->
         <meta name="theme-color" content="#323348" />
 
+        <!-- OpenGraph Info -->
+        <meta property="og:title" content="Glenn's' Portfolio" />
+        <meta property="og:description" content="Game developer, programmer, and artist portfolio showcase." />
         <meta property="og:image" content="https://glennyeo.com/images/lookout_bg.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://glennyeo.com/" />
 
-        <link rel="icon" href="images/favicon.ico" sizes="any" />
         <link rel="icon" href="images/favicon.png" type="image/png" />
 
-        <link rel="stylesheet" href="css/core.css" />
         <link rel="stylesheet" href="css/shared.css" />
         <link rel="stylesheet" href="css/utility.css" />
         <link rel="stylesheet" href="css/index.css" />
@@ -39,26 +42,78 @@
             <div class="parallax-layer par_layer1"></div>
         </div>
 
+        <button id="menuToggleBtn" aria-label="Open menu">
+            <img src="images/ui/ui-hamburger.png" alt="Menu" />
+        </button>
+
+        <nav id="mobileMenu">
+            <!-- Projects -->
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="images/icons/projects.png" class="mobile-icon" alt="" />
+                    <span>Projects</span>
+                </div>
+
+                <div class="mobile-subtopics">
+                    <a href="projects/#major-projects">Major Projects</a>
+                    <a href="projects/#side-projects">Side Projects</a>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="images/icons/about.png" class="mobile-icon" alt="" />
+                    <span>About</span>
+                </div>
+
+                <div class="mobile-subtopics">
+                    <a href="#">Skills</a>
+                    <a href="#">Experience</a>
+                    <a href="#">Education</a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <a href="contact/" class="mobile-topic-single">
+                <img src="images/icons/contact.png" class="mobile-icon" alt="" />
+                <span>Contact</span>
+            </a>
+
+            <!-- Links -->
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="images/icons/link.png" class="mobile-icon" alt="" />
+                    <span>Links</span>
+                </div>
+
+                <div class="mobile-subtopics">
+                    <a href="https://www.artstation.com/glennyeo" target="_blank">ArtStation</a>
+                    <a href="https://www.linkedin.com/in/glennyeooo/">LinkedIn</a>
+                    <a href="https://github.com/GlennDoesGit" target="_blank">Github</a>
+                </div>
+            </div>
+        </nav>
+
         <main>
             <header>
                 <div class="header-content">
                     <a href="index.html">
-                        <img src="images/title-new.png" alt="Glenn Portfolio Home" />
+                        <img src="images/title-new.png" alt="Glenn Portfolio Home" class="title-image" />
                     </a>
                     <p class="wave-text" id="splash-text">SplashText</p>
                 </div>
+
                 <nav class="header-nav">
                     <div class="nav-topic dropdown">
-                        <div class="nav-topic dropdown">
-                            <a href="projects/" class="nav-link">
-                                <img src="images/icons/projects.png" class="nav-icon" alt="Projects icon" />
-                                <span class="nav-label">Projects</span>
-                            </a>
+                        <a href="projects/" class="nav-link">
+                            <img src="images/icons/projects.png" class="nav-icon" alt="Projects icon" />
+                            <span class="nav-label">Projects</span>
+                        </a>
 
-                            <div class="dropdown-menu">
-                                <a href="projects/#major-projects" class="dropdown-item">Major Projects</a>
-                                <a href="projects/#side-projects" class="dropdown-item">Side Projects</a>
-                            </div>
+                        <div class="dropdown-menu">
+                            <a href="projects/#major-projects" class="dropdown-item">Major Projects</a>
+                            <a href="projects/#side-projects" class="dropdown-item">Side Projects</a>
                         </div>
                     </div>
                     <div class="nav-topic dropdown">
@@ -89,6 +144,8 @@
                             <a href="https://github.com/GlennDoesGit" target="_blank" class="dropdown-item external-link">Github</a>
                         </div>
                     </div>
+
+                    <img src="images/mello.gif" alt="Cat sprite" class="nav-cat" />
                 </nav>
             </header>
 
@@ -119,7 +176,7 @@
                         <div class="window-title">Local Conditions</div>
 
                         <div class="window-content" id="weather-content">
-                            <img src="images/weather/no-data.png" id="weather-icon" />
+                            <img src="images/weather/no-data.png" id="weather-icon" alt="Weather icon" />
 
                             <div id="weather-content-text">
                                 <span id="local-time"></span>
@@ -149,7 +206,54 @@
             </div>
 
             <div class="second-section">
-                <h2 class="centered">Featured Projects</h2>
+                <h1 class="centered">Featured Projects</h1>
+
+                <div class="featured-showcase">
+                    <a href="projects/#light-of-the-depths" class="project-card featured-card">
+                        <div class="project-header">
+                            <h3>Light Of The Depths</h3>
+                        </div>
+
+                        <div class="tags">Game Dev, Unity, C#</div>
+
+                        <img src="images/projects/lotd/lotd-banner.png" class="featured-banner" alt="Light Of The Depths preview" />
+
+                        <p class="featured-description">
+                            A 3D tower defense game inspired by Plants vs Zombies. Focused on gameplay systems, enemy behavior design, and player progression
+                            balancing.
+                        </p>
+                    </a>
+
+                    <a href="projects/#imbue" class="project-card featured-card">
+                        <div class="project-header">
+                            <h3>Imbue</h3>
+                        </div>
+
+                        <div class="tags">Game Dev, Unity, VR, C#</div>
+
+                        <img src="images/projects/imbue/imbue-banner.png" class="featured-banner" alt="Imbue preview" />
+
+                        <p class="featured-description">A VR archery game centered around elemental interactions and immersive feedback systems.</p>
+                    </a>
+
+                    <a href="projects/#sanctity" class="project-card featured-card">
+                        <div class="project-header">
+                            <h3>Sanctity</h3>
+                        </div>
+
+                        <div class="tags">Game Dev, Unity, Pixel Art</div>
+
+                        <img src="images/projects/sanctity/sanctity-banner.png" class="featured-banner" alt="Sanctity preview" />
+
+                        <p class="featured-description">
+                            A rogue-like bullet hell created during an 8-week mentorship. All art, animation, and gameplay programming were done by me.
+                        </p>
+                    </a>
+                </div>
+
+                <div class="featured-more-container">
+                    <a href="projects/" class="featured-more-button"> See more projects here → </a>
+                </div>
             </div>
         </main>
 
