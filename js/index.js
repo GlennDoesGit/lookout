@@ -42,54 +42,47 @@ function getWindDescription(speed) {
 // Weather groups name and group based on WMO 4677 codes.
 const weatherGroups = [
     {
-        range: [0, 0],
+        range: [0, 1],
         desc: "Clear Sky",
-        iconDay: "clear-day.png",
-        iconNight: "clear-night.png",
-    },
-
-    {
-        range: [1, 1],
-        desc: "Mostly Clear",
-        iconDay: "mostly-clear-day.png",
-        iconNight: "mostly-clear-night.png",
+        iconDay: "Clear_Day.png",
+        iconNight: "Clear_Night.png",
     },
 
     {
         range: [2, 2],
         desc: "Cloudy",
-        iconDay: "cloudy.png",
-        iconNight: "cloudy.png",
+        iconDay: "Cloudy.png",
+        iconNight: "Cloudy.png",
     },
 
     {
         range: [3, 5],
         desc: "Overcast",
-        iconDay: "overcast.png",
-        iconNight: "overcast.png",
+        iconDay: "Overcast.png",
+        iconNight: "Overcast.png",
     },
 
     {
         range: [40, 49],
         desc: "Fog",
-        iconDay: "fog.png",
-        iconNight: "fog.png",
+        iconDay: "Fog.png",
+        iconNight: "Fog.png",
     },
 
     // Drizzle group (WMO 50–59)
     {
         range: [50, 59],
         desc: "Drizzle",
-        iconDay: "drizzle.png",
-        iconNight: "drizzle.png",
+        iconDay: "Drizzle.png",
+        iconNight: "Drizzle.png",
     },
 
     // Rain group (WMO 60–69)
     {
         range: [60, 69],
         desc: "Rain",
-        iconDay: "rain.png",
-        iconNight: "rain.png",
+        iconDay: "Rain.png",
+        iconNight: "Rain.png",
     },
 
     // Snowfall group (WMO 70–79)
@@ -97,24 +90,24 @@ const weatherGroups = [
     {
         range: [70, 79],
         desc: "Snow",
-        iconDay: "snow.png",
-        iconNight: "snow.png",
+        iconDay: "Snow.png",
+        iconNight: "Snow.png",
     },
 
     // Rain showers (WMO 80–84)
     {
         range: [80, 84],
         desc: "Rain Showers",
-        iconDay: "rain-showers.png",
-        iconNight: "rain-showers.png",
+        iconDay: "RainShowers.png",
+        iconNight: "RainShowers.png",
     },
 
     // Thunderstorm (WMO 95–99)
     {
         range: [95, 99],
         desc: "Thunderstorm",
-        iconDay: "storm.png",
-        iconNight: "storm.png",
+        iconDay: "Storm.png",
+        iconNight: "Storm.png",
     },
 ];
 
@@ -144,7 +137,7 @@ function getWeatherInfo(code, isDay) {
 
     return {
         desc: "Unknown",
-        icon: "no-data.png",
+        icon: "NoData.png",
     };
 }
 
@@ -176,14 +169,14 @@ if (weatherTemp && weatherDesc && weatherWind && weatherIcon) {
 
                 weatherWind.textContent = getWindDescription(wind) + " (" + wind + " km/h)";
 
-                weatherIcon.src = "./images/weather/" + weather.icon;
+                weatherIcon.src = "../images/weather/" + weather.icon;
             })
 
             .catch(() => {
                 weatherTemp.textContent = "Unavailable";
                 weatherDesc.textContent = "Unavailable";
                 weatherWind.textContent = "Unavailable";
-                weatherIcon.src = "./images/weather/no-data.png";
+                weatherIcon.src = "../images/weather/NoData.png";
             });
     }
 
@@ -196,7 +189,7 @@ if (weatherTemp && weatherDesc && weatherWind && weatherIcon) {
 
 // Date Functions
 let currTime = new Date();
-const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "Sepember", "October", "November", "December"];
 
 function SetDate() {
     let currYear = currTime.getFullYear();
