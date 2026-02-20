@@ -1,228 +1,27 @@
-/* Parallax effect */
-.parallax {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -5;
-    background-color: var(--lt_dark);
-}
-
-.parallax-layer {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 200%;
-    height: 100%;
-
-    background-position: 0 0;
-    background-size: 50%;
-
-    background-repeat: repeat-x;
-
-    image-rendering: pixelated;
-}
-
-.par_layer1 {
-    background-image: url("../images/par_layer1.png");
-    animation: parScroll 25s linear infinite;
-}
-
-.par_layer2 {
-    background-image: url("../images/par_layer2.png");
-    animation: parScroll 40s linear infinite;
-}
-
-.par_layer3 {
-    background-image: url("../images/par_layer3.png");
-    animation: parScroll 70s linear infinite;
-}
-
-.par_layer4 {
-    background-image: url("../images/par_layer4.png");
-    animation: parScroll 120s linear infinite;
-}
-
-@keyframes parScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-/* General element settings */
-
-body {
-    font-family: "Lexend Deca", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    color: var(--lt_white);
-}
-
-main {
-    position: relative;
-    
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-left: 30px;
-    padding-right: 30px;
-    
-    width: 100%;
-    max-width: 850px;
-    
-    background-color: var(--lt_darkest);
-    min-height: 100vh;
-
-    box-shadow: 0px 2px 6px var(--lt_shadow);
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 0px;
-    background: var(--lt_darkest);
-}
-
-.header-content {
-    image-rendering: pixelated;
-    text-align: center;
-}
-
-.header-content p {
-    font-size: 20px;
-    margin: 12px;
-    margin-top: 8px;
-}
-
-.wave-text span {
-    display: inline-block;
-    animation: wave 3s linear infinite;
-}
-
-@keyframes wave {
-    0%   { transform: translateY(0px); }
-    25%  { transform: translateY(-2px); }
-    50%  { transform: translateY(0px); }
-    75%  { transform: translateY(2px); }
-    100% { transform: translateY(0px); }
-}
-
-.header-content img {
-    width: 300px;
-}
-
-/* Navigation Topics */
-.header-nav {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    width: 100%;
-    background-color: var(--lt_mutedblue);
-}
-
-.nav-topic {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    cursor: pointer;
-    position: relative;
-    transition: transform 0.2s ease;
-    image-rendering: pixelated;
-}
-
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--lt_pink);
-    transition: fill 0.2s ease;
-}
-
-.nav-topic:hover .nav-icon {
-    fill: var(--lt_peach);
-}
-
-.nav-label {
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-topic:hover .nav-label {
-    color: var(--lt_peach);
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--lt_mutedblue);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    min-width: 180px;
-    opacity: 0;
-    visibility: hidden;
-    transform-origin: top center;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.dropdown.active .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-.dropdown-item {
-    display: block;
-    padding: 12px 20px;
-    color: var(--white);
-    text-decoration: none;
-    border-bottom: 1px solid var(--color-text-light);
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.dropdown-item:last-child {
-    border-bottom: none;
-}
-
-.dropdown-item:hover {
-    background-color: var(--lt_blue);
-    color: var(--lt_peach);
-}
-
 .first-section {
     display: flex;
     gap: 12px;
 }
 
 .main-section {
-    width: 70%;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .sidebar {
-    width: 30%;
+    flex: 0 0 255px;
 }
 
 #weather-content {
     display: flex;
-    gap: 10px;
+    gap: 16px;
     align-items: center;
     font-size: 14px;
 }
 
 #weather-icon {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
     image-rendering: pixelated;
 }
@@ -231,4 +30,73 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
+
+#local-time {
+    display: block;
+}
+
+#weather-temp {
+    color: var(--lt_yellow);
+}
+
+#weather-desc {
+    color: var(--lt_yellow);
+}
+
+#date-header {
+    display: block;
+}
+
+#date-header h2 {
+    margin: 6px;
+    text-align: center;
+    color: var(--lt_pink);
+}
+
+#date-table {
+    width: 100%;
+    text-align: center;
+}
+
+#today {
+    color: var(--lt_pink);
+}
+
+.second-section {
+    padding: 20px 0;
+}
+
+.second-section h2 {
+    text-align: center;
+    color: var(--lt_white);
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .first-section {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .main-section {
+        width: 100%;
+    }
+
+    .sidebar,
+    #weather-window,
+    #date-window {
+        display: none;
+    }
+
+    .window {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .window {
+        margin-bottom: 8px;
+    }
 }

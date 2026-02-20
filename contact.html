@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- SEO Meta -->
-        <title>Glenn | Portfolio</title>
+        <title>Glenn | Contact</title>
         <meta name="description" content="Glenn's Portfolio - Projects, skills, and professional experience." />
 
         <!-- Theme Color -->
@@ -18,8 +18,7 @@
         <link rel="stylesheet" href="css/core.css" />
         <link rel="stylesheet" href="css/shared.css" />
         <link rel="stylesheet" href="css/utility.css" />
-        <link rel="stylesheet" href="css/index.css" />
-        <link rel="stylesheet" href="css/projects.css" />
+        <link rel="stylesheet" href="css/contact.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,7 +64,7 @@
                     </div>
                     <div class="nav-topic">
                         <img src="images/icons/contact.png" class="nav-icon" />
-                        <a href="contact.html" class="nav-label">Contact</a>
+                        <span class="nav-label">Contact</span>
                     </div>
                     <div class="nav-topic dropdown">
                         <img src="images/icons/link.png" class="nav-icon" />
@@ -79,68 +78,30 @@
                 </nav>
             </header>
 
-            <div class="first-section">
-                <div class="main-section">
-                    <div class="window">
-                        <div class="window-title">Introduction</div>
+            <div class="container">
+                <div class="window contact-window">
+                    <div class="window-title">Contact</div>
 
-                        <div class="window-content">
-                            <h2>Hello, I'm Glenn!</h2>
-                            <p>
-                                I am primarily a
-                                <em class="highlight-text">programmer</em>, but also a 2D pixel artist, and a video editor.
-                            </p>
-                            <p>
-                                I currently have a strong interest in
-                                <em class="highlight-text">game development</em>. I enjoy designing gameplay systems and learning about all things programming.
-                            </p>
-                            <p>
-                                This website will serve to showcase past and on-going projects, some of my skills and accomplishments, and general portfolio
-                                things.
-                            </p>
-                        </div>
+                    <div class="window-content">
+                        <form target="_blank" action="https://formsubmit.co/5acf8bdd4a45090a38077cde62b74d2d" method="POST" class="contact-form">
+                            <input type="hidden" name="_captcha" value="false" />
+
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Name" required />
+                                <input type="email" name="email" placeholder="Email Address" required />
+                            </div>
+
+                            <input type="text" name="subject" placeholder="Subject" required />
+
+                            <textarea name="message" rows="8" placeholder="Enter message..." required></textarea>
+
+                            <button type="submit" class="contact-button">Send Message</button>
+                        </form>
                     </div>
                 </div>
-                <div class="sidebar">
-                    <div class="window" id="weather-window">
-                        <div class="window-title">Local Conditions</div>
-
-                        <div class="window-content" id="weather-content">
-                            <img src="images/weather/NoData.png" id="weather-icon" />
-
-                            <div id="weather-content-text">
-                                <span id="local-time"></span>
-                                <span>
-                                    <span class="highlight-text" id="weather-temp">0°C</span>
-                                    with
-                                    <span class="highlight-text" id="weather-desc">Clear Sky</span>
-                                </span>
-                                <span id="weather-wind">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="window" id="date-window">
-                        <div class="window-title">Date</div>
-
-                        <div class="window-content">
-                            <div id="date-header">
-                                <h2>February</h2>
-                                <table id="date-table">
-                                    <!-- Autofilled by index.js -->
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="second-section">
-                <h2 class="centered">Featured Projects</h2>
             </div>
         </main>
 
-        <script src="js/index.js"></script>
         <script src="js/shared.js"></script>
     </body>
 </html>

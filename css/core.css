@@ -23,5 +23,10 @@
     /* Functional */
     --color-border: #a097c4;
     --color-hover: #4c5797;
-    --lt-shadow: #0e0f16A8;
+    --lt-shadow: #0e0f16a8;
+
+    /* Supporting colors */
+    --completed: #3b694f;
+    --ongoing: #475996;
+    --abandoned: #8a4743;
 }
