@@ -619,3 +619,25 @@ header {
     background-color: var(--lt_dark);
     transform: translateY(-2px);
 }
+
+#menuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: var(--lt-dim-panel);
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.25s ease;
+
+    z-index: 9998; /* below menu, above everything else */
+}
+
+#menuOverlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}

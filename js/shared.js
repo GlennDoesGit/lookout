@@ -58,20 +58,30 @@ backToTopBtn.addEventListener("click", () => {
 
 const menuBtn = document.getElementById("menuToggleBtn");
 const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("menuOverlay");
+
+function openMenu() {
+    mobileMenu.classList.add("open");
+    overlay.classList.add("active");
+}
+
+function closeMenu() {
+    mobileMenu.classList.remove("open");
+    overlay.classList.remove("active");
+}
 
 menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-});
-
-document.addEventListener("click", (e) => {
-    if (mobileMenu.classList.contains("open") && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-        mobileMenu.classList.remove("open");
+    if (mobileMenu.classList.contains("open")) {
+        closeMenu();
+    } else {
+        openMenu();
     }
 });
 
+overlay.addEventListener("click", closeMenu);
+
 window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
-        mobileMenu.classList.remove("open");
-        document.body.classList.remove("menu-open");
+        closeMenu();
     }
 });

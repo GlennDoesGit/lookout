@@ -13,7 +13,7 @@
         <meta name="theme-color" content="#323348" />
 
         <!-- OpenGraph Info -->
-        <meta property="og:title" content="Glenn's' Portfolio" />
+        <meta property="og:title" content="Glenn's Portfolio" />
         <meta property="og:description" content="Game developer, programmer, and artist portfolio showcase." />
         <meta property="og:image" content="https://glennyeo.com/images/lookout_bg.png" />
         <meta property="og:type" content="website" />
@@ -43,10 +43,65 @@
             <div class="parallax-layer par_layer1"></div>
         </div>
 
+        <button id="menuToggleBtn" aria-label="Open menu">
+            <img src="../images/ui/ui-hamburger.png" alt="Menu" />
+        </button>
+
+        <nav id="mobileMenu">
+            <!-- Projects -->
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="../images/icons/projects.png" class="mobile-icon" alt="" />
+                    <span>Projects</span>
+                </div>
+
+                <div class="mobile-subtopics">
+                    <a href="../projects/#major-projects">Major Projects</a>
+                    <a href="../projects/#side-projects">Side Projects</a>
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="../images/icons/about.png" class="mobile-icon" alt="" />
+                    <span>About</span>
+                </div>
+
+                <div class="mobile-subtopics">
+                    <a href="#">Skills</a>
+                    <a href="#">Experience</a>
+                    <a href="#">Education</a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <a href="../contact/" class="mobile-topic-single">
+                <img src="../images/icons/contact.png" class="mobile-icon" alt="" />
+                <span>Contact</span>
+            </a>
+
+            <!-- Links -->
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="../images/icons/link.png" class="mobile-icon" alt="" />
+                    <span>Links</span>
+                </div>
+
+                <div class="mobile-subtopics">
+                    <a href="https://www.artstation.com/glennyeo" target="_blank">ArtStation</a>
+                    <a href="https://www.linkedin.com/in/glennyeooo/">LinkedIn</a>
+                    <a href="https://github.com/GlennDoesGit" target="_blank">Github</a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="menuOverlay"></div>
+
         <main>
             <header>
                 <div class="header-content">
-                    <a href="../index.html">
+                    <a href="../">
                         <img src="../images/title-new.png" alt="Glenn Portfolio Home" class="title-image" />
                         <img src="../images/go-back-note.png" alt="go-back-note" class="header-back-note" />
                     </a>
@@ -129,7 +184,7 @@
                                     class="preview-banner flip-front"
                                     onerror="
                                         this.onerror = null;
-                                        this.src = 'images/no-signal.png';
+                                        this.src = '../images/no-signal.png';
                                     "
                                 />
                                 <div class="flip-back">
@@ -156,7 +211,7 @@
                                     class="preview-banner flip-front"
                                     onerror="
                                         this.onerror = null;
-                                        this.src = 'images/no-signal.png';
+                                        this.src = '../images/no-signal.png';
                                     "
                                 />
                                 <div class="flip-back">
@@ -182,7 +237,7 @@
                                     class="preview-banner flip-front"
                                     onerror="
                                         this.onerror = null;
-                                        this.src = 'images/no-signal.png';
+                                        this.src = '../images/no-signal.png';
                                     "
                                 />
                                 <div class="flip-back">
@@ -210,7 +265,7 @@
                                     class="preview-banner flip-front"
                                     onerror="
                                         this.onerror = null;
-                                        this.src = 'images/no-signal.png';
+                                        this.src = '../images/no-signal.png';
                                     "
                                 />
                                 <div class="flip-back">
