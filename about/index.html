@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Glenn | About</title>
+        <meta name="description" content="About Glenn — intro, resume, and skills." />
+        <meta name="theme-color" content="#323348" />
+
+        <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+        <!-- Shared site styling (matches index) -->
+        <link rel="stylesheet" href="../css/shared.css" />
+        <link rel="stylesheet" href="../css/utility.css" />
+
+        <!-- Page-specific styling -->
+        <link rel="stylesheet" href="../css/about.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Jersey+10&family=Lexend+Deca:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <!-- Parallax background (same structure as index) -->
+        <div class="parallax">
+            <div class="parallax-layer par_layer4"></div>
+            <div class="parallax-layer par_layer3"></div>
+            <div class="parallax-layer par_layer2"></div>
+            <div class="parallax-layer par_layer1"></div>
+        </div>
+
+        <!-- Mobile menu toggle (same IDs so shared.js keeps working) -->
+        <button id="menuToggleBtn" aria-label="Open menu">
+            <img src="../images/ui/ui-hamburger.png" alt="Menu" />
+        </button>
+
+        <!-- Mobile menu (copied layout so styling matches index) -->
+        <nav id="mobileMenu">
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="../images/icons/projects.png" class="mobile-icon" alt="" />
+                    <span>Projects</span>
+                </div>
+                <div class="mobile-subtopics">
+                    <a href="../projects/#major-projects">Major Projects</a>
+                    <a href="../projects/#side-projects">Side Projects</a>
+                </div>
+            </div>
+
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="../images/icons/about.png" class="mobile-icon" alt="" />
+                    <span>About</span>
+                </div>
+                <div class="mobile-subtopics">
+                    <a href="#intro">Intro</a>
+                    <a href="#technical-skills">Technical Skills</a>
+                    <a href="#soft-skills">Soft Skills</a>
+                </div>
+            </div>
+
+            <a href="../contact/" class="mobile-topic-single">
+                <img src="../images/icons/contact.png" class="mobile-icon" alt="" />
+                <span>Contact</span>
+            </a>
+
+            <div class="mobile-topic">
+                <div class="mobile-topic-main">
+                    <img src="../images/icons/link.png" class="mobile-icon" alt="" />
+                    <span>Links</span>
+                </div>
+                <div class="mobile-subtopics">
+                    <a href="https://www.artstation.com/glennyeo" target="_blank">ArtStation</a>
+                    <a href="https://www.linkedin.com/in/glennyeooo/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/GlennDoesGit" target="_blank">Github</a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="menuOverlay"></div>
+
+        <main>
+            <!-- Header/nav matches index structure -->
+            <header>
+                <div class="header-content">
+                    <a href="../">
+                        <img src="../images/title-new.png" alt="Glenn Portfolio Home" class="title-image" />
+                    </a>
+                    <p class="wave-text" id="splash-text">About</p>
+                </div>
+
+                <nav class="header-nav">
+                    <div class="nav-topic dropdown">
+                        <a href="../projects/" class="nav-link">
+                            <img src="../images/icons/projects.png" class="nav-icon" alt="Projects icon" />
+                            <span class="nav-label">Projects</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../projects/#major-projects" class="dropdown-item">Major Projects</a>
+                            <a href="../projects/#side-projects" class="dropdown-item">Side Projects</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-topic dropdown">
+                        <a href="./" class="nav-link">
+                            <img src="../images/icons/about.png" class="nav-icon" alt="About icon" />
+                            <span class="nav-label">About</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="#intro" class="dropdown-item">Intro</a>
+                            <a href="#technical-skills" class="dropdown-item">Technical Skills</a>
+                            <a href="#soft-skills" class="dropdown-item">Soft Skills</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-topic">
+                        <a href="../contact/" class="nav-link">
+                            <img src="../images/icons/contact.png" class="nav-icon" alt="Contact icon" />
+                            <span class="nav-label">Contact</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-topic dropdown">
+                        <a class="nav-link">
+                            <img src="../images/icons/link.png" class="nav-icon" alt="Links icon" />
+                            <span class="nav-label">Links</span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="https://www.artstation.com/glennyeo" target="_blank" class="dropdown-item external-link">ArtStation</a>
+                            <a href="https://www.linkedin.com/in/glennyeooo/" target="_blank" class="dropdown-item external-link">LinkedIn</a>
+                            <a href="https://github.com/GlennDoesGit" target="_blank" class="dropdown-item external-link">Github</a>
+                        </div>
+                    </div>
+
+                    <img src="../images/mello.gif" alt="Cat sprite" class="nav-cat" />
+                </nav>
+            </header>
+
+            <!-- ABOUT CONTENT -->
+            <section class="about-grid">
+                <!-- Intro -->
+                <div class="window" id="intro">
+                    <div class="window-title">About</div>
+                    <div class="window-content">
+                        <h2 class="about-heading">Hi! I'm Glenn.</h2>
+
+                        <p class="about-intro">
+                            I am a <em class="highlight-text">game developer</em>, mainly a programmer but I can also make pixel art on the side.
+
+                            <br /><br />I have a strong interest in computer and systems in general, particularly
+                            <em class="highlight-text">low-level concepts like memory management</em>, <em class="highlight-text">optimization techniques</em>,
+                            and <em class="highlight-text">software architecture</em>. I often look for resources to learn more about these topics.
+
+                            <br /><br />In my projects, I always <em class="highlight-text">prioritize clean</em>,
+                            <em class="highlight-text">maintainable code</em> and follow best practices like keeping things
+                            <em class="highlight-text">scalable</em> and <em class="highlight-text">modular</em>. I have a good eye for detail and consistently
+                            aim to deliver polished, high-quality work.
+                        </p>
+
+                        <a
+                            class="resume-button external-link"
+                            href="../assets/Glenn-Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open resume PDF in a new tab"
+                        >
+                            See Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="window" id="technical-skills">
+                    <div class="window-title">Technical Skills</div>
+                    <div class="window-content">
+                        <div class="skills-wrap tech">
+                            <span class="skill-pill">C#</span>
+                            <span class="skill-pill">Unity</span>
+                            <span class="skill-pill">Gameplay Systems</span>
+                            <span class="skill-pill">AI / Behavior</span>
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">Video Editing</span>
+                            <span class="skill-pill">Pixel Art</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="window" id="soft-skills">
+                    <div class="window-title">Soft Skills</div>
+                    <div class="window-content">
+                        <div class="skills-wrap soft">
+                            <span class="skill-pill">Communication</span>
+                            <span class="skill-pill">Team Management</span>
+                            <span class="skill-pill">Collaboration</span>
+                            <span class="skill-pill">Planning</span>
+                            <span class="skill-pill">Feedback</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <button id="backToTopBtn" aria-label="Back to top">
+            <img src="../images/ui/ui-back-to-top.png" alt="Back to top" />
+        </button>
+
+        <!-- Use your existing scripts so menu + back-to-top work -->
+        <script src="../js/shared.js"></script>
+        <script src="../js/index.js"></script>
+    </body>
+</html>

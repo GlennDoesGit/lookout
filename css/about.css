@@ -1,0 +1,83 @@
+/* Layout similar spacing rhythm to index sections */
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 22px;
+}
+
+.about-heading {
+    margin: 0 0 8px 0;
+}
+
+.about-intro {
+    margin: 0 0 14px 0;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.resume-button {
+    display: block;
+    margin: 0 auto;
+
+    width: 175px;
+    text-align: center;
+
+    padding: 10px 18px;
+    background-color: var(--lt_darkest);
+    color: var(--lt_white);
+    border: 2px solid var(--lt_lavender_l);
+
+    font-weight: 700;
+    transition:
+        transform 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.resume-button:hover {
+    background-color: var(--lt_dark);
+    transform: translateY(-2px);
+}
+
+/* Skills layout */
+.skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Small skill boxes */
+.skill-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 6px 10px;
+    border: 2px solid var(--lt_lavender_l);
+
+    background-color: var(--lt_darkest);
+    color: var(--lt_white);
+
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+
+    box-shadow: 0px 2px 6px var(--lt_shadow);
+}
+
+/* Color rules per your spec */
+.skills-wrap.tech .skill-pill {
+    border-color: var(--lt_lavender_l);
+}
+
+.skills-wrap.soft .skill-pill {
+    border-color: var(--lt_blue_l);
+}
+
+/* Responsive: keep it simple and consistent with shared breakpoints */
+@media (max-width: 768px) {
+    .skill-pill {
+        font-size: 13px;
+        padding: 6px 9px;
+    }
+}
