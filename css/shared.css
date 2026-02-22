@@ -26,6 +26,17 @@ html {
     text-transform: uppercase;
 }
 
+.window-title-wip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    background-image: linear-gradient(to right, var(--lt_peach), var(--lt_yellow));
+
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
 .window-content {
     padding: 8px;
 }

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Imbue</title>
+        <!-- <link rel="icon" href="favicon.png" type="image/png" /> -->
+
+        <link rel="stylesheet" href="../../css/projectpage.css" />
+
+        <style>
+            @font-face {
+                font-family: "main-font";
+                src: url("fonts/alagard.woff2") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "body-font";
+                src: url("fonts/calamity.woff2") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            html {
+                font-size: 16px;
+            }
+
+            :root {
+                --bg-color: #141a2c;
+                --text-color: #ffffff;
+                --body-text-color: #c0c0c0;
+                --accent-color: #dfbc9b;
+                --secondary-color: #18354a;
+                --highlight-color: #32daf0;
+
+                --font-main: main-font, sans-serif;
+                --font-body: body-font, sans-serif;
+
+                --main-font-scale: 0.85;
+                --body-font-scale: 0.5;
+
+                --fs-0: 0.875rem;
+                --fs-1: 1rem;
+                --fs-2: 1.5rem;
+                --fs-3: 2rem;
+                --fs-4: 3rem;
+                --fs-5: 4rem;
+
+                --text-body: calc(var(--fs-2) * var(--body-font-scale));
+                --text-small: calc(var(--fs-1) * var(--body-font-scale));
+
+                --text-h1: calc(var(--fs-5) * var(--main-font-scale));
+                --text-h2: calc(var(--fs-4) * var(--main-font-scale));
+                --text-h3: calc(var(--fs-3) * var(--main-font-scale));
+            }
+
+            body {
+                margin: 0;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                font-family: var(--font-body);
+                font-size: var(--text-body);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: var(--font-main);
+                margin: 0;
+            }
+
+            p {
+                color: var(--body-text-color);
+            }
+
+            .highlight {
+                color: var(--highlight-color);
+            }
+
+            .page-wrapper {
+                width: 100%;
+                max-width: 1100px;
+                padding: 0 24px;
+                margin: 0 auto;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            .spacer-top {
+                height: 60px;
+            }
+
+            .back-button {
+                display: inline-block;
+                margin-bottom: 24px;
+                color: var(--accent-color);
+                text-decoration: none;
+                font-size: var(--text-body);
+                border: 2px solid var(--accent-color);
+                padding: 8px 24px;
+            }
+
+            .back-button:hover {
+                opacity: 0.7;
+            }
+
+            .project-title {
+                font-size: var(--text-h1);
+                margin-bottom: 10px;
+            }
+
+            .project-subtitle {
+                font-size: var(--text-body);
+                margin-bottom: 40px;
+            }
+
+            .section {
+                margin-top: 60px;
+            }
+
+            .section-title {
+                font-size: var(--text-h2);
+                font-family: var(--font-main);
+                margin-bottom: 20px;
+                color: var(--accent-color);
+            }
+
+            .text-header h1 {
+                font-size: var(--text-h3);
+                text-align: center;
+            }
+
+            .text-block {
+                padding: 24px 48px;
+                text-align: justify;
+                line-height: 3;
+            }
+
+            .roles-list {
+                text-align: left;
+                display: inline-block;
+                font-size: var(--text-body);
+            }
+
+            .roles-list li {
+                margin-bottom: 10px;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="spacer-top"></div>
+
+        <div class="page-wrapper">
+            <a href="../" class="back-button">Back to Projects</a>
+
+            <h1 class="project-title">Imbue</h1>
+
+            <p class="project-subtitle">A VR Archery game with engaging, dynamic enemy AI and a elemental reaction system.</p>
+
+            <h2>Project Details</h2>
+            <p>Solo Project</p>
+            <p>Duration: 4 Months</p>
+
+            <!-- Gameplay YouTube Video -->
+            <div class="section video-container">
+                <div class="section-title">Gameplay</div>
+
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/dOBVYPrk9ao" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Description -->
+            <div class="section">
+                <div class="section-title">Overview</div>
+
+                <div class="text-block">
+                    Equipped with a bow and arrows, fight through enemies with the help of magical elements that you can imbue into your arrow.
+
+                    <br /><br />This game features .
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="section">
+                <div class="section-title">Gallery</div>
+
+                <div class="gallery">
+                    <img src="images/imbue1.png" />
+                    <img src="images/imbue2.png" />
+                    <img src="images/imbue3.png" />
+                    <img src="images/imbue4.png" />
+                </div>
+            </div>
+
+            <!-- Roles -->
+            <div class="section">
+                <div class="section-title">Features</div>
+
+                <ul class="roles-list">
+                    <li>Multi-part character customization from appearance to quiver position.</li>
+
+                    <li>Control system designed around making combat as intuitive as possible.</li>
+
+                    <li>Element system with distinct effects with reactive interactions between each element.</li>
+
+                    <li>Dynamic and engaging feeling enemies that retreat, strafe, and attack.</li>
+
+                    <li>Satisfying visual and audio effects.</li>
+                </ul>
+            </div>
+
+            <!-- Key Technical Systems -->
+            <div class="section">
+                <div class="section-title">Technical Highlight</div>
+
+                <div class="text-header">
+                    <h1>Elemental Reactions</h1>
+                </div>
+                <div class="text-block">
+                    <div class="text-block">
+                        Elements have unique effects, like ice that freezes or fire that burns. On top of that, when another element is applied, it should react
+                        accordingly to the current effect the enemy has, like Fire + Ice = Wet.
+                    </div>
+                </div>
+
+                <div class="text-header">
+                    <h1>Character Customization</h1>
+                </div>
+                <div class="text-block">
+                    <div class="text-block">
+                        Elements have unique effects, like ice that freezes or fire that burns. On top of that, when another element is applied, it should react
+                        accordingly to the current effect the enemy has, like Fire + Ice = Wet.
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer-top"></div>
+        </div>
+    </body>
+</html>

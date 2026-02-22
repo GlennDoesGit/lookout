@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>LOTD</title>
+        <link rel="icon" href="favicon.png" type="image/png" />
+
+        <link rel="stylesheet" href="../../css/projectpage.css" />
+
+        <style>
+            @font-face {
+                font-family: "TowerDefenseTitle";
+                src: url("fonts/GhoulFriAOE.woff2") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "TowerDefenseBody";
+                src: url("fonts/RomanAntique.woff2") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            html {
+                font-size: 16px;
+            }
+
+            :root {
+                --bg-color: #000000;
+                --text-color: #ffffff;
+                --body-text-color: #c0c0c0;
+                --accent-color: #707c9e;
+                --secondary-color: #18354a;
+                --highlight-color: #81b7c9;
+
+                --font-main: TowerDefenseTitle, sans-serif;
+                --font-body: TowerDefenseBody, sans-serif;
+
+                --main-font-scale: 1;
+                --body-font-scale: 1;
+
+                --fs-0: 0.875rem;
+                --fs-1: 1rem;
+                --fs-2: 1.5rem;
+                --fs-3: 2rem;
+                --fs-4: 3rem;
+                --fs-5: 4rem;
+
+                --text-body: calc(var(--fs-2) * var(--body-font-scale));
+                --text-small: calc(var(--fs-1) * var(--body-font-scale));
+
+                --text-h1: calc(var(--fs-5) * var(--main-font-scale));
+                --text-h2: calc(var(--fs-4) * var(--main-font-scale));
+                --text-h3: calc(var(--fs-3) * var(--main-font-scale));
+            }
+
+            body {
+                margin: 0;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: var(--font-main);
+                margin: 0;
+            }
+
+            p {
+                font-family: var(--font-body);
+                color: var(--body-text-color);
+            }
+
+            .highlight {
+                color: var(--highlight-color);
+            }
+
+            .page-wrapper {
+                width: 100%;
+                max-width: 1100px;
+                padding: 0 24px;
+                margin: 0 auto;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            .spacer-top {
+                height: 60px;
+            }
+
+            .back-button {
+                display: inline-block;
+                margin-bottom: 24px;
+                color: var(--accent-color);
+                text-decoration: none;
+                font-size: var(--text-body);
+                border: 2px solid var(--accent-color);
+                padding: 8px 24px;
+            }
+
+            .back-button:hover {
+                opacity: 0.7;
+            }
+
+            .project-title {
+                font-size: var(--text-h1);
+                margin-bottom: 10px;
+            }
+
+            .project-subtitle {
+                font-size: var(--text-body);
+                margin-bottom: 40px;
+            }
+
+            .section {
+                margin-top: 60px;
+            }
+
+            .section-title {
+                font-size: var(--text-h2);
+                font-family: var(--font-main);
+                margin-bottom: 20px;
+                color: var(--accent-color);
+            }
+
+            .text-header h1 {
+                font-size: var(--text-h3);
+                text-align: center;
+            }
+
+            .text-block {
+                padding: 24px 48px;
+                text-align: justify;
+                line-height: 1.6;
+            }
+
+            .roles-list {
+                text-align: left;
+                display: inline-block;
+                font-size: var(--text-body);
+            }
+
+            .roles-list li {
+                margin-bottom: 10px;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 15px;
+            }
+
+            .gallery img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="spacer-top"></div>
+
+        <div class="page-wrapper">
+            <a href="../" class="back-button">Back to Projects</a>
+
+            <h1 class="project-title">Light Of The Depths</h1>
+
+            <p class="project-subtitle">3D tower defense game heavily inspired by Plants Vs Zombies.</p>
+
+            <h2>Project Details</h2>
+            <p>Team Size: 8-man</p>
+            <p>Role: Team Lead, Lead Programmer</p>
+            <p>Duration: 6 Months</p>
+
+            <!-- Gameplay YouTube Video -->
+            <div class="section video-container">
+                <div class="section-title">Gameplay</div>
+
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/ccgvXugo3Ps" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- Description -->
+            <div class="section">
+                <div class="section-title">Overview</div>
+
+                <div class="text-block">
+                    In this game, you play as a lighthouse keeper, defending against 3 sides of attacks from ocean creatures.
+
+                    <br /><br />
+                    Unlock Rigs to build and increase your defenses to handle these monsters.
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="section">
+                <div class="section-title">Gallery</div>
+
+                <div class="gallery">
+                    <img src="images/image3.png" />
+                    <img src="images/image2.png" />
+                </div>
+            </div>
+
+            <!-- Roles -->
+            <div class="section">
+                <div class="section-title">My Contributions</div>
+
+                <ul class="roles-list">
+                    <li>Led technical direction and guided style and project pacing</li>
+
+                    <li>Designed and implemented core gameplay systems</li>
+
+                    <li>Handled all tower logic and behaviors</li>
+
+                    <li>Handled enemy AI behavior with a Finite State Machine</li>
+
+                    <li>Debugging and unit testing of features</li>
+
+                    <li>Implemented improvements in game feel through animations and responsive feedback</li>
+
+                    <li>Created UI sprites</li>
+                </ul>
+            </div>
+
+            <!-- Key Technical Systems -->
+            <div class="section">
+                <div class="section-title">Technical Highlight</div>
+
+                <div class="text-header">
+                    <h1>Dynamic Wave System</h1>
+                </div>
+                <div class="text-block">
+                    <div class="text-block">
+                        The wave and <span class="highlight">progression system</span> implemented for this game is designed to be
+                        <span class="highlight">modular</span>, <span class="highlight">deterministic</span> and is a generally very in-depth system. All waves
+                        and its enemies are first <span class="highlight">precalculated</span> all enemies to spawn before the level starts to reduce runtime
+                        overhead. It chooses enemies and spawn locations through a <span class="highlight">weighted random system</span>, allowing granular
+                        control over each level's <span class="highlight">difficulty</span>. <br /><br />Each wave's progression is controlled with the wave's
+                        <span class="highlight">total health pool</span>. When either the total health pool goes under a
+                        <span class="highlight">configurable threshold</span>, or when a certain amount of time has passed, the next wave will start. This makes
+                        it so that if players are unable to finish a wave, they will not be overwhelmed by multiple next waves. <br /><br />This wave system is
+                        fully <span class="highlight">data-driven</span> and allows <span class="highlight">designers</span> to create, configure, and finely
+                        tune waves to ensure that players are <span class="highlight">challenged</span> whilst still remaining
+                        <span class="highlight">fair</span>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="spacer-top"></div>
+        </div>
+    </body>
+</html>

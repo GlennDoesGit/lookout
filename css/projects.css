@@ -30,8 +30,6 @@
 
 .project-card {
     background-color: var(--lt_darkest);
-    border: 1px solid var(--lt_shadow);
-    box-shadow: 0px 2px 6px var(--lt_shadow);
     padding: 15px;
     text-decoration: none;
     color: var(--lt_white);
@@ -55,6 +53,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.project-card:hover h3 {
+    color: var(--lt_yellow);
 }
 
 .tags {
